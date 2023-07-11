@@ -1,0 +1,23 @@
+package qsp;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ToLaunchChromeBroweser {
+
+	public static void main(String[] args) throws InterruptedException
+	{
+	  System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+	  
+	  // Upcast into WebDriver (I)
+	  
+	WebDriver driver =	new ChromeDriver();
+    driver.manage().window().maximize();
+
+	Thread.sleep(2000);
+    // To close broweser
+	
+	driver.close();
+
+	}
+}
